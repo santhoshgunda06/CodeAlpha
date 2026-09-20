@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore Beautiful Images</p>
+    </header>
+
+
+    
+    <div class="filters">
+
+        <button onclick="filterImages('all')">All</button>
+
+        <button onclick="filterImages('nature')">Nature</button>
+
+        <button onclick="filterImages('animals')">Animals</button>
+
+        <button onclick="filterImages('city')">City</button>
+
+    </div>
+
+
+    
+    <main class="gallery">
+
+        
+        <div class="gallery-item nature">
+
+            <img
+                src="./Assets/photo1.jpg"
+                alt="Beautiful Mountain"
+                onclick="openLightbox(0)"
+            >
+
+            <h3>Beautiful Mountain</h3>
+
+        </div>
+
+
+        
+        <div class="gallery-item nature">
+
+            <img
+                src="./Assets/Landscape2.jpg"
+                alt="Beautiful Nature"
+                onclick="openLightbox(1)"
+            >
+
+            <h3>Beautiful Nature</h3>
+
+        </div>
+
+
+        
+        <div class="gallery-item animals">
+
+            <img
+                src="./Assets/Landscape.jpg"
+                alt="Cute Animal"
+                onclick="openLightbox(2)"
+            >
+
+            <h3>Cute Animal</h3>
+
+        </div>
+
+
+       
+        <div class="gallery-item city">
+
+            <img
+                src="./Assets/Dog.jpg"
+                alt="City View"
+                onclick="openLightbox(3)"
+            >
+
+            <h3>City View</h3>
+
+        </div>
+
+
+        
+        <div class="gallery-item animals">
+
+            <img
+                src="./Assets/City.jpg"
+                alt="Cute Dog"
+                onclick="openLightbox(4)"
+            >
+
+            <h3>Cute Dog</h3>
+
+        </div>
+
+
+        
+        <div class="gallery-item city">
+
+            <img
+                src="./Assets/Animal.jpg"
+                alt="City Architecture"
+                onclick="openLightbox(5)"
+            >
+
+            <h3>City Architecture</h3>
+
+        </div>
+
+    </main>
+
+
+    
+
+    <div id="lightbox" class="lightbox">
+
+        <!-- Close -->
+        <span
+            class="close"
+            onclick="closeLightbox()"
+        >
+            &times;
+        </span>
+
+
+        
+        <button
+            class="navigation prev"
+            onclick="previousImage()"
+        >
+            &#10094;
+        </button>
+
+
+        
+        <img
+            id="lightboxImage"
+            src=""
+            alt="Large Image"
+        >
+
+
+        
+        <button
+            class="navigation next"
+            onclick="nextImage()"
+        >
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <footer>
+        <p>© 2026 My Image Gallery | Frontend Development</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
